@@ -43,7 +43,15 @@ Despite the fact you can build most of the following Stuff as an pure iOS Shortc
 
 ## Usage of Apple Shortcut APIs
 
-When it comes to Data received from an Apple Shortcut Action, you can simply pass it to the List that goes in to the `Execute script` Block. 
+When it comes to Data received from an Apple Shortcut Action, you can simply pass it to the List that goes in to the `Execute script` Block. You can access the List data later on in the template like following:
+
+```JavaScript
+let template = """
+...
+          <p> Todays temperature:<br>${args.shortcutParameter[0]} </p>
+...
+"""
+```
 
 ## Usage of Scriptable scripts
 
